@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #d3d3d3; /* Gray background */
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .main-content {
+        width: 80%;
+        max-width: 600px;
+        background-color: #fffbcc; /* Slight yellow */
+        border-radius: 10px;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .orange-box {
+        width: 95%;
+        height: 70%;
+        background-image: url("/assets/bcg.png");
+        background-size: cover;
+        background-position: center;
+        margin: 0 auto 20px auto;
+        border-radius: 5px;
+        padding: 15px;
+        box-sizing: border-box;
+        display: flex;
+      }
+      .left-column {
+        width: 25%;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .profile-photo {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #ccc; /* Placeholder color for profile photo */
+        margin: 0 auto 10px;
+      }
+      .right-column {
+        width: 75%;
+        padding: 10px;
+        text-align: left;
+        box-sizing: border-box;
+        color: #fff; /* White text for readability */
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff; /* Blue */
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 14px;
+        margin-top: 15px;
+      }
+      .button img {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+      .logo {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-content">
+        <div class="orange-box">
+          <div class="left-column">
+            <div class="profile-photo"></div>
+            <div>John Doe</div>
+            <div>⭐⭐⭐⭐☆</div>
+            <div>(128 reviews)</div>
+          </div>
+          <div class="right-column">
+            <p>Hi Harry,</p>
+            <p>I have prepared this estimate for your review.</p>
+            <p>Thank you!</p>
+            <p>Jane Smith</p>
+            <a href="#" class="button">
+              <img
+                src="file-icon.png"
+                alt="File Icon"
+                width="16"
+                height="16"
+              />View Estimate
+            </a>
+          </div>
+        </div>
+        <div class="logo">
+          <img src="logo.png" alt="Logo" width="100" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
