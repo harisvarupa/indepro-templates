@@ -8,105 +8,164 @@
         padding: 0;
         width: 100%;
         height: 100%;
-        background-color: #d3d3d3; /* Gray background */
+        background-color: #d3d3d3;
         font-family: Arial, sans-serif;
-      }
-      .container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .main-content {
-        width: 80%;
-        max-width: 600px;
-        background-color: #fffbcc; /* Slight yellow */
-        border-radius: 10px;
-        padding: 20px;
-        box-sizing: border-box;
         text-align: center;
       }
-      .orange-box {
+
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+
+      img {
+        display: block;
+        border: 0;
+      }
+
+      .main-content {
         width: 95%;
-        height: 70%;
+        max-width: 600px;
+        background-color: #fffbcc;
+        border-radius: 15px;
+        text-align: center;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      .orange-box {
+        width: 93%;
+        height: 280px;
         background-image: url("/assets/bcg.png");
         background-size: cover;
-        background-position: center;
-        margin: 0 auto 20px auto;
-        border-radius: 5px;
-        padding: 15px;
+        background-position: bottom;
+        color: #fff;
         box-sizing: border-box;
-        display: flex;
+        margin-top: 20px;
       }
-      .left-column {
-        width: 25%;
-        text-align: center;
-        padding: 10px;
-        box-sizing: border-box;
-      }
+
       .profile-photo {
         width: 70px;
         height: 70px;
-        border-radius: 50%;
-        background-color: #ccc; /* Placeholder color for profile photo */
-        margin: 0 auto 10px;
+        border-radius: 100%;
+        background-color: #ccc;
+        margin-bottom: 10px;
       }
-      .right-column {
-        width: 75%;
-        padding: 10px;
-        text-align: left;
-        box-sizing: border-box;
-        color: #fff; /* White text for readability */
-      }
+
       .button {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         padding: 10px 20px;
-        background-color: #007bff; /* Blue */
+        background-color: #007bff;
         color: #fff;
         border-radius: 5px;
         text-decoration: none;
         font-size: 14px;
         margin-top: 15px;
       }
+
       .button img {
         vertical-align: middle;
         margin-right: 8px;
+        display: inline-block;
       }
-      .logo {
-        margin-top: 20px;
+
+      .logo img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .stack td {
+          display: block;
+          width: 100% !important;
+          text-align: center;
+        }
+
+        .button {
+          display: block;
+          margin: 15px auto;
+        }
+
+        .orange-box {
+          height: auto;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="main-content">
-        <div class="orange-box">
-          <div class="left-column">
-            <div class="profile-photo"></div>
-            <div>John Doe</div>
-            <div>⭐⭐⭐⭐☆</div>
-            <div>(128 reviews)</div>
-          </div>
-          <div class="right-column">
-            <p>Hi Harry,</p>
-            <p>I have prepared this estimate for your review.</p>
-            <p>Thank you!</p>
-            <p>Jane Smith</p>
-            <a href="#" class="button">
-              <img
-                src="file-icon.png"
-                alt="File Icon"
-                width="16"
-                height="16"
-              />View Estimate
-            </a>
-          </div>
-        </div>
-        <div class="logo">
-          <img src="logo.png" alt="Logo" width="100" />
-        </div>
-      </div>
-    </div>
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center" valign="middle">
+          <table class="main-content" cellpadding="0" cellspacing="0">
+            <tr>
+              <td>
+                <!-- Orange Box -->
+                <table
+                  class="orange-box"
+                  cellpadding="10"
+                  cellspacing="0"
+                  style="border-radius: 15px"
+                >
+                  <tr class="stack">
+                    <!-- Left Column -->
+                    <td align="center" valign="center" style="width: 30%">
+                      <img class="profile-photo" src="/assets/profile_photo.png"></img>
+                      <p style="margin: 5px 0; color: #fff; font-weight: bold">
+                        {{first_name}}
+                      </p>
+                      <p style="margin: 5px 0; color: #fff; font-weight: bold">
+                        {{last_name}}
+                      </p>
+                      <div style="text-align: center;">
+                      <img src="/assets/star.png" width="18" alt="star" style="display: inline;">
+                      <img src="/assets/star.png" width="18" alt="star" style="display: inline;">                      
+                      <img src="/assets/star.png" width="18" alt="star" style="display: inline;">                      
+                      <img src="/assets/star.png" width="18" alt="star" style="display: inline;">
+                      <img src="/assets/star.png" width="18" alt="star" style="display: inline; opacity: 25%;">
+                      <p style="margin: 5px 0; color: #fff; font-size: 12px">
+                        ({{reviews}} reviews)
+                      </p>
+                    </td>
+                    <!-- Right Column -->
+                    <td align="left" valign="center" style="width: 70%">
+                      <p style="margin: 5px 0; color: #fff; font-size: 28px; font-weight: bold;">
+                        hi {{first_name}},
+                      </p>
+                      <p style="margin-bottom: 15px; color: #fff; font-size: 14px;">
+                        I have prepared this estimate for your review.
+                      </p>
+                      <p style="margin: 5px 0; color: #fff; font-size: 14px;">Thank you!</p>
+                      <p style="margin: 5px 0; color: #fff; font-size: 14px;">Jane Smith</p>
+                      <a href="#" class="button">
+                        <img
+                          src="/assets/file.png"
+                          alt="File Icon"
+                          width="20"
+                          height="20"
+                        />
+                        view estimate
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <!-- Logo -->
+                <div class="logo">
+                  <img src="/assets/logo.png" alt="Logo" width="170" />
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
