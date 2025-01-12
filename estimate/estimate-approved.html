@@ -31,6 +31,8 @@
         border-radius: 15px;
         text-align: center;
         margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
         box-sizing: border-box;
       }
 
@@ -79,11 +81,16 @@
         margin-bottom: 25px;
       }
 
+      .main-text {
+        margin-bottom: 5px; color: #fff; font-size: 13px; width: 75%; line-height: 1.5; font-weight: lighter; opacity: 90%;
+      }
+
       @media only screen and (max-width: 600px) {
         .stack td {
           display: block;
-          width: 100% !important;
+          width: 90% !important;
           text-align: center;
+          margin: 0 auto;
         }
 
         .button {
@@ -94,6 +101,15 @@
         .orange-box {
           height: auto;
         }
+        .profile-photo {
+        margin: 0 auto;
+        margin-bottom: -40px;
+      }
+      .main-text {
+        width: 100%; 
+        margin: 10px auto; 
+        text-align: center;
+      }
       }
     </style>
   </head>
@@ -115,7 +131,7 @@
                     <!-- Left Column -->
                     <td align="top" valign="top" style="width: 30%">
                       <img class="profile-photo" src="https://indeproapp.com/assets/roo_happy.png"></img>
-                      <p style="margin: 5px 0; color: #fff; font-weight: bold">
+                      <p style="margin: 5px 0; color: #fff; font-weight: bold; font-size: 20px;">
                         - Roo
                       </p>
                     </td>
@@ -124,7 +140,7 @@
                       <p style="margin: 5px 0; color: #fff; font-size: 28px; font-weight: bold;">
                         hiya {{first_name}},
                       </p>
-                      <p style="margin-bottom: 5px; color: #fff; font-size: 13px; width: 75%; line-height: 1.5; font-weight: lighter; opacity: 90%;">
+                      <p class="main-text">
                         Your job’s a go! Time to hop into action.
                         Harry Homeowner approved {{job_name}}   
                       </p>

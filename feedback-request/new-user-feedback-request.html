@@ -29,7 +29,8 @@
         max-width: 600px;
         background-color: #FFF6D6;
         text-align: center;
-        margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
         box-sizing: border-box;
       }
 
@@ -78,11 +79,20 @@
         margin-bottom: 25px;
       }
 
+      .title {
+        margin: 5px 0; color: #fff; font-size: 30px; font-weight: bold;
+      }
+
+      .main-text {
+        margin-bottom: 10px; color: #fff; font-size: 12px; width: 85%; opacity: 90%; line-height: 1.5;
+      }
+
       @media only screen and (max-width: 600px) {
         .stack td {
           display: block;
-          width: 100% !important;
+          width: 90% !important;
           text-align: center;
+          margin: 0 auto;
         }
 
         .button {
@@ -92,6 +102,21 @@
 
         .orange-box {
           height: auto;
+        }
+
+        .profile-photo {
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+
+        .title {
+          width: 100%;
+        }
+
+        .main-text {
+          width: 100%; 
+          margin: 10px auto; 
+          text-align: center;
         }
       }
     </style>
@@ -123,10 +148,10 @@
                     </td>
                     <!-- Right Column -->
                     <td align="left" valign="center" style="width: 70%">
-                      <p style="margin: 5px 0; color: #fff; font-size: 30px; font-weight: bold;">
+                      <p class="title">
                         hi {{first_name}}!
                       </p>
-                      <p style="margin-bottom: 10px; color: #fff; font-size: 12px; width: 85%; opacity: 90%; line-height: 1.5;">
+                      <p class="main-text">
                         I’m building my professional profile on indepro and I was hoping you’d be willing to provide a reference for me. Your support would mean a lot!
                       </p>
                       <p style="margin: 5px 0; color: #fff; font-size: 12px;">Thank you!</p>

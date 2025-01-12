@@ -29,7 +29,8 @@
         max-width: 700px;
         background-color: #E9F4FF;
         text-align: center;
-        margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
         box-sizing: border-box;
       }
 
@@ -81,8 +82,9 @@
       @media only screen and (max-width: 600px) {
         .stack td {
           display: block;
-          width: 100% !important;
+          width: 90% !important;
           text-align: center;
+          margin: 0 auto;
         }
 
         .button {
@@ -92,6 +94,16 @@
 
         .orange-box {
           height: auto;
+        }
+        .profile-photo {
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+
+        .main-text {
+          width: 100%; 
+          margin: 10px auto; 
+          text-align: center;
         }
       }
     </style>
@@ -132,10 +144,10 @@
                       <p style="margin: 5px 0; color: #fff; font-size: 28px; font-weight: bold;">
                         thank you!
                       </p>
-                      <p style="margin-bottom: 5px; color: #fff; font-size: 12px; width: 80%; opacity: 90%;">
+                      <p class="main-text" style="margin-bottom: 5px; color: #fff; font-size: 12px; width: 80%; opacity: 90%;">
                         Thank you so much for considering me. I’m grateful for the opportunity, and I’m sorry it didn’t work out this time.
                       </p>
-                      <p style="margin: 5px 0; color: #fff; font-size: 12px;">- {{first_name}} {{last_name}} -</p>
+                      <p style="margin-bottom: 20px; color: #fff; font-size: 12px;">- {{first_name}} {{last_name}} -</p>
                     </td>
                   </tr>
                 </table>

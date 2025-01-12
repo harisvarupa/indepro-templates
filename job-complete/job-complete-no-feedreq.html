@@ -78,11 +78,16 @@
         margin-bottom: 25px;
       }
 
+      .main-text {
+        margin-bottom: 5px; color: #fff; font-size: 12px; width: 85%; opacity: 90%;
+      }
+
       @media only screen and (max-width: 600px) {
         .stack td {
           display: block;
-          width: 100% !important;
+          width: 90% !important;
           text-align: center;
+           margin: 0 auto;
         }
 
         .button {
@@ -92,6 +97,17 @@
 
         .orange-box {
           height: auto;
+        }
+
+        .profile-photo {
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+
+        .main-text {
+          width: 100%; 
+          margin: 10px auto; 
+          text-align: center;
         }
       }
     </style>
@@ -132,7 +148,7 @@
                       <p style="margin: 5px 0; color: #fff; font-size: 28px; font-weight: bold;">
                         job complete!
                       </p>
-                      <p style="margin-bottom: 5px; color: #fff; font-size: 12px; width: 85%; opacity: 90%;">
+                      <p class="main-text">
                         Thank you! I’m grateful for the opportunity to work together.
 Please find the invoice attached.
                       </p>
