@@ -8,7 +8,7 @@
         padding: 0;
         width: 100%;
         height: 100%;
-        background-color: #d3d3d3;
+        background-color: #fffbcc;
         font-family: Arial, sans-serif;
         text-align: center;
       }
@@ -27,7 +27,6 @@
       .main-content {
         width: 95%;
         max-width: 600px;
-        background-color: #fffbcc;
         border-radius: 15px;
         text-align: center;
         margin-top: 100px;
@@ -89,7 +88,7 @@
         }
 
         .button {
-          display: block;
+          display: inline-block;
           margin: 15px auto;
         }
 
@@ -119,12 +118,12 @@
                   <tr class="stack">
                     <!-- Left Column -->
                     <td align="center" valign="center" style="width: 30%">
-                      <img class="profile-photo" src="{{profile_photo}}"></img>
+                      <img class="profile-photo" src="{{profilePhoto}}"></img>
                       <p style="margin: 5px 0; color: #fff; font-weight: bold">
-                        {{first_name}}
+                        {{executorFirstName}}
                       </p>
                       <p style="margin: 5px 0; color: #fff; font-weight: bold">
-                        {{last_name}}
+                        {{executorLastName}}
                       </p>
                       <div style="text-align: center;">
                       <img src="https://indeproapp.com/assets/star.png" width="18" alt="star" style="display: inline;">
@@ -139,14 +138,14 @@
                     <!-- Right Column -->
                     <td align="left" valign="center" style="width: 70%">
                       <p style="margin: 5px 0; color: #fff; font-size: 28px; font-weight: bold;">
-                        hi {{first_name}},
+                        hi {{clientName}},
                       </p>
                       <p style="margin-bottom: 15px; color: #fff; font-size: 14px;">
                         I have prepared this estimate for your review.
                       </p>
                       <p style="margin: 5px 0; color: #fff; font-size: 14px;">Thank you!</p>
-                      <p style="margin: 5px 0; color: #fff; font-size: 14px;">{{first_name}} {{last_name}}</p>
-                      <a href="#" class="button">
+                      <p style="margin: 5px 0; color: #fff; font-size: 14px;">{{executorFirstName}} {{executorLastName}}</p>
+                      <a href="{{estimateUrl}}" class="button">
                         <img
                           src="https://indeproapp.com/assets/file.png"
                           alt="File Icon"
